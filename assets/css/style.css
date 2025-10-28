@@ -134,6 +134,12 @@ li {
     border: none;
     outline: none;
     padding: 0 15px;
+    width:97%;
+}
+@media(max-width:567px) {
+    .search_container input[type=search]{
+        font-size: 14px;
+    }
 }
 .search_container a{
     background: #35CD8C;
