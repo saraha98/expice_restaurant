@@ -39,14 +39,14 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
     
 </head>
 
-<body class="overflow-hidden">
-    <div class="location ">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>Rajshahi</span>
-    </div> 
+<body class="">
+    
     <!-- Header / Navbar -->
     <nav class="navbar navbar-expand-xl py-3 custom-navbar ">
         <div class="container d-flex align-items-center">
@@ -91,13 +91,17 @@
             <div class="row">
 
                 <!-- Text Content -->
-                <div class="col-xl-8 col-lg-7 col-md-7  text-lg-start position-relative z-1 content-section" data-aos="fade-right"  data-aos-duration="2000">
+                <div class="col-xl-6 col-lg-6 col-md-6  text-lg-start position-relative z-1 content-section" data-aos="fade-right"  data-aos-duration="2000">
                     <h1 class=" fw-bold hero-title" >Food</h1>
                     <h1 class="display-5 fw-bold hero-subtitle">Discover Restaurant
                         & Delicious Food</h1>
                     <div class="search_container">
                         <input type="search" placeholder="search restaurant, food">
                         <a class="btn"> GO </a>
+                    </div>
+                    <div class="location ">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Rajshahi</span>
                     </div>
                     
                     
@@ -106,19 +110,53 @@
                 
 
                 <!-- Image Content -->
-                <div class="col-xl-4 col-lg-5 col-md-5 text-center mt-4 mt-lg-0">
-                    <div class="image-section-container  " data-aos="fade-left"  data-aos-duration="2000">
-                        <img src="assets/img/—Pngtree—delicious food_568171 1.png" class="hero_image">
-                        <img src="assets/img/Make Vector BG.png" class="dot_one">
-                        <img src="assets/img/Make Vector BG.png" class="dot_two">
-                        <img src="assets/img/—Pngtree—lettuce_1175257 1.png" class="planet">
-                    </div>
+                <div class="col-xl-6 col-lg-6 col-md-6  text-center position-relative">
+                    
+                    <div class="swiper mySwiper" data-aos="fade-left" data-aos-duration="2000">
+                        <div class="swiper-wrapper">
 
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide">
+                                <div class="image-section-container">
+                                    <img src="assets/img/—Pngtree—delicious food_568171 1.png" class="hero_image">
+                                    <img src="assets/img/Make Vector BG.png" class="dot_one">
+                                    <img src="assets/img/Make Vector BG.png" class="dot_two">
+                                    <img src="assets/img/—Pngtree—lettuce_1175257 1.png" class="planet">
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide">
+                                <div class="image-section-container">
+                                    <img src="assets/img/—Pngtree—delicious food_568171 1.png" class="hero_image">
+                                    <img src="assets/img/Make Vector BG.png" class="dot_one">
+                                    <img src="assets/img/Make Vector BG.png" class="dot_two">
+                                    <img src="assets/img/—Pngtree—lettuce_1175257 1.png" class="planet">
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide">
+                                <div class="image-section-container">
+                                    <img src="assets/img/—Pngtree—delicious food_568171 1.png" class="hero_image">
+                                    <img src="assets/img/Make Vector BG.png" class="dot_one">
+                                    <img src="assets/img/Make Vector BG.png" class="dot_two">
+                                    <img src="assets/img/—Pngtree—lettuce_1175257 1.png" class="planet">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Navigation and Pagination -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
                 </div>
                 
 
             </div>
         </div>
+         
          
     </section>
 
@@ -448,20 +486,23 @@
     AOS.init();
     </script>
     <script>
-        const swiper = new Swiper('.partnerSwiper', {
-            slidesPerView: 4,
-            spaceBetween: 30,
+         var swiper = new Swiper(".mySwiper", {
             loop: true,
             autoplay: {
-            delay: 2000,
-            disableOnInteraction: false,
+                delay: 2500,
+                disableOnInteraction: false,
             },
-            breakpoints: {
-            0: { slidesPerView: 1 },
-            768: { slidesPerView: 3 },
-            992: { slidesPerView: 4 },
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-        });
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+    });
     </script>
 
 </body>
